@@ -37,7 +37,7 @@ let's discuss some things about the commerce architecture in general in order to
 
 - More or less in our universe we observe something like that :
 
-![](assets/ecom.png)
+![](ecom.png)
 
 As mentioned earlier tracing is a method of tracking application information, as a request flows from service to service.
 So Let's suppose that requests from external systems pass through the commerce gateway in order to flow on the main components. 
@@ -47,7 +47,7 @@ Probably commerce gateway.
 
 * Let's think about these additions in the previous topology
 
-![](assets/ecom2.png)
+![](ecom2.png)
 
 * We need to apply two main concepts, intercept incoming requests in a single point and enhance a given tracer with these information, so 
 he can auto handle the propagation from service to service.
@@ -168,7 +168,7 @@ At the moment we are following the 1st simpler approach while we do not need to 
 
 ### Scenario 1
 
-![](assets/ecom3.png)
+![](ecom3.png)
 
 We can use the opentelemetry api to retrieve the current trace_id and in the magic section of our interceptor associate it with a given header.
 
